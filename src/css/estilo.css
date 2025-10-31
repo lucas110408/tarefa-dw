@@ -1,3 +1,28 @@
-body{
+/* Estilo geral do corpo da página */
+body {
     background-color: aliceblue;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Estilização aplicada à imagem (Requisito: Mudar a aparência de algo) */
+.imagem-trabalho {
+    /* Define o tamanho máximo para evitar quebra de layout */
+    max-width: 300px;
+    height: auto;
+    
+    /* Adiciona uma borda simples para diferenciar a aparência */
+    border: 3px solid #0056b3; 
+    border-radius: 8px;
+    
+    /* Garante um espaçamento vertical */
+    margin: 15px 0;
+    display: block;
+}
+
+/* Estilo para links principais */
+a {
+    color: #cc0000;
+    font-weight: bold;
+    text-decoration: none;
 }
