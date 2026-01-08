@@ -1,20 +1,20 @@
-/* Configuração de Cores e Scroll Suave */
+/* Definição de Cores */
 :root {
     --primary-blue: #003366;
     --action-orange: #E67E22;
 }
 
 html {
-    scroll-behavior: smooth; /* Isso faz a tela descer deslizando */
-    scroll-padding-top: 80px; /* Compensa a altura do menu fixo */
+    scroll-behavior: smooth; /* Essencial para o "deslizar" da tela */
+    scroll-padding-top: 80px; /* Evita que o título fique escondido atrás do menu */
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #F0F2F5;
+    background-color: #F8F9FA;
 }
 
-/* Navbar Fixa e Cores */
+/* Navbar */
 .bg-custom-blue {
     background-color: var(--primary-blue) !important;
 }
@@ -27,28 +27,28 @@ body {
 
 .btn-custom-orange:hover {
     background-color: #d35400 !important;
+    color: white;
 }
 
 .text-custom-blue {
     color: var(--primary-blue);
 }
 
-/* Estilo do Banner */
+/* Banner Principal */
 .hero-section {
-    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://source.unsplash.com/random/1200x600/?technology');
+    background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.8)), url('https://source.unsplash.com/random/1200x600/?technology,code');
     background-size: cover;
     background-position: center;
-    height: 400px;
-    margin-top: 56px; /* Espaço para não ficar escondido atrás do menu */
+    height: 450px;
+    margin-top: 56px;
     border-bottom: 5px solid var(--action-orange);
 }
 
-/* Cards */
+/* Melhoria visual nos Cards */
 .card {
-    transition: transform 0.3s;
-    border: none;
+    transition: transform 0.2s ease-in-out;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Efeito de flutuar */
 }
