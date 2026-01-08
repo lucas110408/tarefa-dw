@@ -1,0 +1,48 @@
+/* Variáveis de Cores do Projeto */
+:root {
+    --primary-blue: #003366; /* Azul Confiança */
+    --action-orange: #E67E22; /* Laranja Ação */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F0F2F5;
+}
+
+/* Classes personalizadas para sobrescrever o Bootstrap */
+.bg-custom-blue {
+    background-color: var(--primary-blue) !important;
+}
+
+.btn-custom-orange {
+    background-color: var(--action-orange) !important;
+    border-color: var(--action-orange) !important;
+    color: white;
+}
+
+.btn-custom-orange:hover {
+    background-color: #d35400 !important; /* Laranja um pouco mais escuro */
+}
+
+.text-custom-blue {
+    color: var(--primary-blue);
+}
+
+/* Estilo do Banner (Hero) */
+.hero-section {
+    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://source.unsplash.com/random/1200x600/?technology');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    border-bottom: 5px solid var(--action-orange);
+}
+
+/* Melhoria nos Cards */
+.card {
+    transition: transform 0.3s;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito de levitação ao passar o mouse */
+}
