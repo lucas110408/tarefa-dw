@@ -4,14 +4,23 @@
     --action-orange: #E67E22;
 }
 
+/* Comportamento da Página */
 html {
-    scroll-behavior: smooth; /* Essencial para o "deslizar" da tela */
-    scroll-padding-top: 80px; /* Evita que o título fique escondido atrás do menu */
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Mais espaço ao clicar no menu */
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #F8F9FA;
+    color: #333;
+}
+
+/* CLASSE NOVA: Espaçamento Gigante */
+/* Isso garante que o site pareça grande e cada seção respire */
+.espacamento-extra {
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 /* Navbar */
@@ -22,33 +31,39 @@ body {
 .btn-custom-orange {
     background-color: var(--action-orange) !important;
     border-color: var(--action-orange) !important;
-    color: white;
+    transition: all 0.3s ease;
 }
 
 .btn-custom-orange:hover {
     background-color: #d35400 !important;
-    color: white;
+    transform: scale(1.05); /* Efeito de crescer botão */
 }
 
 .text-custom-blue {
     color: var(--primary-blue);
 }
 
-/* Banner Principal */
-.hero-section {
-    background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.8)), url('https://source.unsplash.com/random/1200x600/?technology,code');
-    background-size: cover;
-    background-position: center;
-    height: 450px;
-    margin-top: 56px;
-    border-bottom: 5px solid var(--action-orange);
+/* Pequeno espaçamento de letras para títulos chiques */
+.ls-2 {
+    letter-spacing: 2px;
 }
 
-/* Melhoria visual nos Cards */
+/* Banner Principal */
+.hero-section {
+    background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.7)), url('https://source.unsplash.com/random/1920x1080/?technology,futuristic');
+    background-size: cover;
+    background-position: center;
+    height: 600px; /* Altura maior para o banner */
+    margin-top: 70px;
+    border-bottom: 8px solid var(--action-orange);
+}
+
+/* Cards com hover suave */
 .card {
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Efeito de flutuar */
+    transform: translateY(-10px); /* Sobe mais ao passar mouse */
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
 }
