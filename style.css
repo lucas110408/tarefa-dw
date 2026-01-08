@@ -1,7 +1,12 @@
-/* Variáveis de Cores do Projeto */
+/* Configuração de Cores e Scroll Suave */
 :root {
-    --primary-blue: #003366; /* Azul Confiança */
-    --action-orange: #E67E22; /* Laranja Ação */
+    --primary-blue: #003366;
+    --action-orange: #E67E22;
+}
+
+html {
+    scroll-behavior: smooth; /* Isso faz a tela descer deslizando */
+    scroll-padding-top: 80px; /* Compensa a altura do menu fixo */
 }
 
 body {
@@ -9,7 +14,7 @@ body {
     background-color: #F0F2F5;
 }
 
-/* Classes personalizadas para sobrescrever o Bootstrap */
+/* Navbar Fixa e Cores */
 .bg-custom-blue {
     background-color: var(--primary-blue) !important;
 }
@@ -21,28 +26,29 @@ body {
 }
 
 .btn-custom-orange:hover {
-    background-color: #d35400 !important; /* Laranja um pouco mais escuro */
+    background-color: #d35400 !important;
 }
 
 .text-custom-blue {
     color: var(--primary-blue);
 }
 
-/* Estilo do Banner (Hero) */
+/* Estilo do Banner */
 .hero-section {
     background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://source.unsplash.com/random/1200x600/?technology');
     background-size: cover;
     background-position: center;
     height: 400px;
+    margin-top: 56px; /* Espaço para não ficar escondido atrás do menu */
     border-bottom: 5px solid var(--action-orange);
 }
 
-/* Melhoria nos Cards */
+/* Cards */
 .card {
     transition: transform 0.3s;
     border: none;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Efeito de levitação ao passar o mouse */
+    transform: translateY(-5px);
 }
