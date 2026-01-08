@@ -1,24 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Lucas Pereira">
-    <link rel="stylesheet" href="./src/css/estilo.css"> 
-    <title>Trabalho de Substituição - Lucas Pereira</title>
+    <title>TechTetive - Tecnologia Acessível</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
-    
-    <h1>Autor: Lucas Pereira</h1>
-    <p> Trabalho para substituição da aula.</p>
-    
-    <a href="https://www.globo.com/" target="_blank">Link Externo: Globo</a>
-    <br>
-    
-    <img src="./src/img/globo.webp" alt="Logo da Globo" class="imagem-trabalho">
-    <br>
 
-    <a href="https://lucas110408.github.io/site2/" target="_blank">Link Interno: Site 2</a>
-    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom-blue">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-eye-fill"></i> TechTetive
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-custom-orange text-white ms-2 px-3" href="#">
+                            <i class="bi bi-cart"></i> Carrinho <span id="cart-count" class="badge bg-danger">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Tecnologia para Todos</h1>
+            <p class="lead">Produtos adaptados e acessíveis para facilitar o seu dia a dia.</p>
+            <a href="#produtos" class="btn btn-custom-orange btn-lg mt-3">Ver Ofertas</a>
+        </div>
+    </header>
+
+    <section id="produtos" class="container my-5">
+        <h2 class="text-center mb-4 text-custom-blue">Destaques da Semana</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="bg-secondary bg-opacity-25 d-flex align-items-center justify-content-center" style="height: 200px;">
+                        <i class="bi bi-keyboard display-1 text-secondary"></i>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Teclado Braille Master</h5>
+                        <p class="card-text text-muted">Teclado mecânico com marcações em Braille de alto relevo.</p>
+                        <h4 class="text-success mb-3">R$ 350,00</h4>
+                        <button class="btn btn-outline-primary mt-auto btn-comprar" onclick="adicionarAoCarrinho('Teclado Braille')">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="bg-secondary bg-opacity-25 d-flex align-items-center justify-content-center" style="height: 200px;">
+                        <i class="bi bi-laptop display-1 text-secondary"></i>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Notebook Voz Ativa</h5>
+                        <p class="card-text text-muted">Vem com leitor de tela NVDA pré-instalado e configurado.</p>
+                        <h4 class="text-success mb-3">R$ 2.800,00</h4>
+                        <button class="btn btn-outline-primary mt-auto btn-comprar" onclick="adicionarAoCarrinho('Notebook Voz Ativa')">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="bg-secondary bg-opacity-25 d-flex align-items-center justify-content-center" style="height: 200px;">
+                        <i class="bi bi-phone display-1 text-secondary"></i>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Celular Teclas Grandes</h5>
+                        <p class="card-text text-muted">Interface simplificada com feedback sonoro ao toque.</p>
+                        <h4 class="text-success mb-3">R$ 890,00</h4>
+                        <button class="btn btn-outline-primary mt-auto btn-comprar" onclick="adicionarAoCarrinho('Celular Acessível')">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-custom-blue text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 TechTetive. Projeto acadêmico sem fins comerciais.</p>
+        </div>
+    </footer>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
