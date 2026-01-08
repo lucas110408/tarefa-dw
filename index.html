@@ -10,9 +10,9 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-custom-blue fixed-top shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom-blue fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
+            <a class="navbar-brand fw-bold fs-4" href="#">
                 <i class="bi bi-eye-fill"></i> TechTetive
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -20,13 +20,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#produtos">Lançamentos</a></li>
-                    <li class="nav-item"><a class="nav-link text-warning fw-bold" href="#ofertas">Ofertas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link mx-2" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link mx-2" href="#produtos">Lançamentos</a></li>
+                    <li class="nav-item"><a class="nav-link mx-2 text-warning fw-bold" href="#ofertas">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link mx-2" href="#sobre">Quem Somos</a></li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-custom-orange text-white ms-2 px-3 position-relative" href="#carrinho">
-                            <i class="bi bi-cart"></i> 
+                        <a class="nav-link btn btn-custom-orange text-white ms-3 px-4 position-relative rounded-pill" href="#carrinho">
+                            <i class="bi bi-cart"></i> Carrinho
                             <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 0
                             </span>
@@ -39,62 +39,66 @@
 
     <header id="inicio" class="hero-section text-center text-white d-flex align-items-center justify-content-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">Tecnologia para Todos</h1>
-            <p class="lead">Produtos inclusivos com preços que cabem no bolso.</p>
-            <div class="d-flex gap-2 justify-content-center mt-4">
-                <a href="#produtos" class="btn btn-outline-light btn-lg">Ver Lançamentos</a>
-                <a href="#ofertas" class="btn btn-custom-orange btn-lg">Ver Ofertas</a>
+            <h1 class="display-3 fw-bold mb-3">Tecnologia para Todos</h1>
+            <p class="lead fs-4 mb-5">Quebrando barreiras digitais com produtos inclusivos e preços justos.</p>
+            <div class="d-flex gap-3 justify-content-center">
+                <a href="#produtos" class="btn btn-outline-light btn-lg px-5 rounded-pill">Ver Lançamentos</a>
+                <a href="#ofertas" class="btn btn-custom-orange btn-lg px-5 rounded-pill">Ver Ofertas</a>
             </div>
         </div>
     </header>
 
-    <section id="produtos" class="container my-5 pt-5">
-        <h2 class="text-center mb-2 text-custom-blue">Lançamentos</h2>
-        <p class="text-center text-muted mb-4">O que há de mais novo em tecnologia assistiva.</p>
-        <div class="row">
-            <div class="col-md-4 mb-4">
+    <section id="produtos" class="container espacamento-extra">
+        <div class="text-center mb-5">
+            <span class="text-custom-blue fw-bold text-uppercase ls-2">Catálogo 2026</span>
+            <h2 class="display-5 fw-bold mt-2">Lançamentos Recentes</h2>
+            <p class="text-muted w-75 mx-auto">Nossa curadoria de produtos testados por especialistas em acessibilidade e usabilidade.</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
                 <div class="card h-100 shadow-sm border-0">
-                    <div class="bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <i class="bi bi-keyboard display-1 text-primary"></i>
+                    <div class="bg-light d-flex align-items-center justify-content-center rounded-top" style="height: 250px;">
+                        <i class="bi bi-keyboard display-1 text-primary opacity-50"></i>
                     </div>
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Teclado Braille Master</h5>
-                        <p class="card-text text-muted small">Teclado mecânico de alto relevo.</p>
-                        <h4 class="text-dark mb-3">R$ 350,00</h4>
-                        <button class="btn btn-primary mt-auto w-100" onclick="adicionarAoCarrinho('Teclado Braille', 350.00)">
-                            Comprar
+                    <div class="card-body d-flex flex-column p-4">
+                        <h5 class="card-title fw-bold">Teclado Braille Master</h5>
+                        <p class="card-text text-muted">Teclado mecânico ergonômico com marcações em Braille de alto relevo em todas as teclas.</p>
+                        <h4 class="text-dark mb-4">R$ 350,00</h4>
+                        <button class="btn btn-primary w-100 py-2 rounded-pill mt-auto" onclick="adicionarAoCarrinho('Teclado Braille', 350.00)">
+                            Adicionar ao Carrinho
                         </button>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4">
                 <div class="card h-100 shadow-sm border-0">
-                    <div class="bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <i class="bi bi-laptop display-1 text-primary"></i>
+                    <div class="bg-light d-flex align-items-center justify-content-center rounded-top" style="height: 250px;">
+                        <i class="bi bi-laptop display-1 text-primary opacity-50"></i>
                     </div>
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Notebook Voz Ativa</h5>
-                        <p class="card-text text-muted small">Processador i5 com Leitor NVDA.</p>
-                        <h4 class="text-dark mb-3">R$ 2.800,00</h4>
-                        <button class="btn btn-primary mt-auto w-100" onclick="adicionarAoCarrinho('Notebook Voz', 2800.00)">
-                            Comprar
+                    <div class="card-body d-flex flex-column p-4">
+                        <h5 class="card-title fw-bold">Notebook Voz Ativa</h5>
+                        <p class="card-text text-muted">Processador i5 de última geração, SSD rápido e Leitor de Tela NVDA já configurado.</p>
+                        <h4 class="text-dark mb-4">R$ 2.800,00</h4>
+                        <button class="btn btn-primary w-100 py-2 rounded-pill mt-auto" onclick="adicionarAoCarrinho('Notebook Voz', 2800.00)">
+                            Adicionar ao Carrinho
                         </button>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4">
                 <div class="card h-100 shadow-sm border-0">
-                    <div class="bg-light d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <i class="bi bi-printer display-1 text-primary"></i>
+                    <div class="bg-light d-flex align-items-center justify-content-center rounded-top" style="height: 250px;">
+                        <i class="bi bi-printer display-1 text-primary opacity-50"></i>
                     </div>
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Impressora Braille</h5>
-                        <p class="card-text text-muted small">Impressão tátil doméstica.</p>
-                        <h4 class="text-dark mb-3">R$ 1.200,00</h4>
-                        <button class="btn btn-primary mt-auto w-100" onclick="adicionarAoCarrinho('Impressora Braille', 1200.00)">
-                            Comprar
+                    <div class="card-body d-flex flex-column p-4">
+                        <h5 class="card-title fw-bold">Impressora Tátil</h5>
+                        <p class="card-text text-muted">Imprime documentos em relevo e Braille. Ideal para uso doméstico e acadêmico.</p>
+                        <h4 class="text-dark mb-4">R$ 1.200,00</h4>
+                        <button class="btn btn-primary w-100 py-2 rounded-pill mt-auto" onclick="adicionarAoCarrinho('Impressora Braille', 1200.00)">
+                            Adicionar ao Carrinho
                         </button>
                     </div>
                 </div>
@@ -102,73 +106,76 @@
         </div>
     </section>
 
-    <section id="ofertas" class="bg-light py-5">
-        <div class="container pt-4">
-            <h2 class="text-center mb-2 text-danger fw-bold"><i class="bi bi-tag-fill"></i> Super Ofertas</h2>
-            <p class="text-center text-muted mb-5">Descontos exclusivos por tempo limitado.</p>
+    <section id="ofertas" class="bg-light espacamento-extra">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="text-danger fw-bold text-uppercase ls-2">Oportunidade Única</span>
+                <h2 class="display-5 fw-bold mt-2"><i class="bi bi-stopwatch"></i> Ofertas Relâmpago</h2>
+                <p class="text-muted">Preços reduzidos por tempo limitado. Aproveite antes que acabe o estoque.</p>
+            </div>
             
-            <div class="row">
-                <div class="col-md-4 mb-4">
+            <div class="row g-4">
+                <div class="col-md-4">
                     <div class="card h-100 border-danger shadow position-relative">
-                        <span class="position-absolute top-0 end-0 badge bg-danger m-2">-30%</span>
-                        <div class="bg-white d-flex align-items-center justify-content-center" style="height: 200px;">
-                            <i class="bi bi-headphones display-1 text-secondary"></i>
+                        <span class="position-absolute top-0 end-0 badge bg-danger m-3 fs-6">-30% OFF</span>
+                        <div class="bg-white d-flex align-items-center justify-content-center rounded-top" style="height: 250px;">
+                            <i class="bi bi-headphones display-1 text-secondary opacity-50"></i>
                         </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Headset Conforto</h5>
-                            <p class="card-text text-muted small">Cancelamento de ruído ativo.</p>
+                        <div class="card-body d-flex flex-column p-4">
+                            <h5 class="card-title fw-bold">Headset Conforto</h5>
+                            <p class="card-text text-muted small">Cancelamento de ruído ativo para maior foco.</p>
                             
-                            <div class="mb-3">
-                                <span class="text-decoration-line-through text-muted">R$ 400,00</span>
-                                <h4 class="text-danger fw-bold">R$ 280,00</h4>
+                            <div class="mb-4">
+                                <span class="text-decoration-line-through text-muted fs-6">R$ 400,00</span>
+                                <h4 class="text-danger fw-bold fs-3">R$ 280,00</h4>
                             </div>
 
-                            <button class="btn btn-outline-danger mt-auto w-100" onclick="adicionarAoCarrinho('Headset (Oferta)', 280.00)">
-                                Aproveitar Oferta
+                            <button class="btn btn-outline-danger w-100 py-2 rounded-pill mt-auto" onclick="adicionarAoCarrinho('Headset (Oferta)', 280.00)">
+                                Pegar Desconto
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4">
                     <div class="card h-100 border-danger shadow position-relative">
-                        <span class="position-absolute top-0 end-0 badge bg-danger m-2">-20%</span>
-                        <div class="bg-white d-flex align-items-center justify-content-center" style="height: 200px;">
-                            <i class="bi bi-smartwatch display-1 text-secondary"></i>
+                        <span class="position-absolute top-0 end-0 badge bg-danger m-3 fs-6">-20% OFF</span>
+                        <div class="bg-white d-flex align-items-center justify-content-center rounded-top" style="height: 250px;">
+                            <i class="bi bi-smartwatch display-1 text-secondary opacity-50"></i>
                         </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Relógio Falante</h5>
-                            <p class="card-text text-muted small">Dita as horas e notificações.</p>
+                        <div class="card-body d-flex flex-column p-4">
+                            <h5 class="card-title fw-bold">Relógio Falante</h5>
+                            <p class="card-text text-muted small">Dita as horas em voz alta com um toque.</p>
                             
-                            <div class="mb-3">
-                                <span class="text-decoration-line-through text-muted">R$ 250,00</span>
-                                <h4 class="text-danger fw-bold">R$ 200,00</h4>
+                            <div class="mb-4">
+                                <span class="text-decoration-line-through text-muted fs-6">R$ 250,00</span>
+                                <h4 class="text-danger fw-bold fs-3">R$ 200,00</h4>
                             </div>
 
-                            <button class="btn btn-outline-danger mt-auto w-100" onclick="adicionarAoCarrinho('Relógio (Oferta)', 200.00)">
-                                Aproveitar Oferta
+                            <button class="btn btn-outline-danger w-100 py-2 rounded-pill mt-auto" onclick="adicionarAoCarrinho('Relógio (Oferta)', 200.00)">
+                                Pegar Desconto
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4">
                     <div class="card h-100 border-danger shadow position-relative">
-                        <span class="position-absolute top-0 end-0 badge bg-danger m-2">-50%</span>
-                        <div class="bg-white d-flex align-items-center justify-content-center" style="height: 200px;">
-                            <i class="bi bi-phone-vibrate display-1 text-secondary"></i>
+                        <span class="position-absolute top-0 end-0 badge bg-danger m-3 fs-6">-50% OFF</span>
+                        <div class="bg-white d-flex align-items-center justify-content-center rounded-top" style="height: 250px;">
+                            <i class="bi bi-phone-vibrate display-1 text-secondary opacity-50"></i>
                         </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Capa Anti-Impacto</h5>
-                            <p class="card-text text-muted small">Textura áspera para melhor pega.</p>
+                        <div class="card-body d-flex flex-column p-4">
+                            <h5 class="card-title fw-bold">Capa Anti-Impacto</h5>
+                            <p class="card-text text-muted small">Silicone reforçado com textura áspera.</p>
                             
-                            <div class="mb-3">
-                                <span class="text-decoration-line-through text-muted">R$ 80,00</span>
-                                <h4 class="text-danger fw-bold">R$ 40,00</h4>
+                            <div class="mb-4">
+                                <span class="text-decoration-line-through text-muted fs-6">R$ 80,00</span>
+                                <h4 class="text-danger fw-bold fs-3">R$ 40,00</h4>
                             </div>
 
-                            <button class="btn btn-outline-danger mt-auto w-100" onclick="adicionarAoCarrinho('Capa (Oferta)', 40.00)">
-                                Aproveitar Oferta
+                            <button class="btn btn-outline-danger w-100 py-2 rounded-pill mt-auto" onclick="adicionarAoCarrinho('Capa (Oferta)', 40.00)">
+                                Pegar Desconto
                             </button>
                         </div>
                     </div>
@@ -177,66 +184,108 @@
         </div>
     </section>
 
-    <section id="sobre" class="bg-white py-5">
-        <div class="container pt-4">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2 class="text-custom-blue mb-3">Quem somos?</h2>
-                    <p class="lead">A TechTetive une programação e propósito.</p>
-                    <p>
-                        Nossa missão é democratizar o acesso ao mundo digital.
-                        Cada item do nosso catálogo é testado e aprovado.
+    <section id="sobre" class="bg-white espacamento-extra">
+        <div class="container">
+            <div class="row align-items-center gx-5">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <span class="text-custom-blue fw-bold text-uppercase ls-2">Sobre a Empresa</span>
+                    <h2 class="display-5 fw-bold mb-4">Muito mais que uma loja virtual</h2>
+                    <p class="lead text-dark mb-4">
+                        A TechTetive nasceu em 2025, dentro dos laboratórios do Instituto Federal, com um propósito claro: provar que a tecnologia só é verdadeiramente avançada quando é acessível a todos.
                     </p>
+                    <p class="text-muted mb-3">
+                        O que começou como um projeto acadêmico rapidamente se tornou uma referência em comércio eletrônico inclusivo. Nossa equipe é formada por desenvolvedores, designers e especialistas em acessibilidade que trabalham incansavelmente para curar um catálogo de produtos que devolvem a independência aos usuários.
+                    </p>
+                    <p class="text-muted mb-4">
+                        Entendemos que cada clique importa. Por isso, nossa plataforma segue rigorosamente as diretrizes WCAG (Web Content Accessibility Guidelines), garantindo que pessoas com deficiência visual, motora ou cognitiva possam navegar com autonomia.
+                    </p>
+                    
+                    <div class="row g-4 mt-2">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success fs-4 me-3"></i>
+                                <span class="fw-bold">Suporte Humanizado</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success fs-4 me-3"></i>
+                                <span class="fw-bold">Garantia Estendida</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success fs-4 me-3"></i>
+                                <span class="fw-bold">Envio Nacional</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success fs-4 me-3"></i>
+                                <span class="fw-bold">Testado por Usuários</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 text-center">
-                    <i class="bi bi-buildings-fill display-1 text-custom-blue"></i>
+                
+                <div class="col-lg-6">
+                    <div class="p-5 bg-light rounded-4 text-center shadow-lg">
+                        <i class="bi bi-buildings display-1 text-custom-blue mb-3"></i>
+                        <h4 class="fw-bold mb-3">Nossa Sede</h4>
+                        <p class="text-muted">Juiz de Fora - MG</p>
+                        <hr class="my-4">
+                        <i class="bi bi-award display-1 text-warning mb-3"></i>
+                        <h4 class="fw-bold mb-3">Prêmio Inovação 2025</h4>
+                        <p class="text-muted">Reconhecimento IF Sudeste MG</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="carrinho" class="container my-5 py-5">
-        <div class="card border-0 shadow-lg">
-            <div class="card-header bg-custom-blue text-white">
-                <h3 class="mb-0"><i class="bi bi-cart4"></i> Carrinho de Compras</h3>
+    <section id="carrinho" class="container espacamento-extra">
+        <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+            <div class="card-header bg-custom-blue text-white p-4">
+                <h3 class="mb-0 fw-bold"><i class="bi bi-cart4 me-2"></i> Seu Carrinho</h3>
             </div>
-            <div class="card-body">
+            <div class="card-body p-4">
                 <div class="table-responsive">
                     <table class="table table-hover align-middle">
                         <thead class="table-light">
                             <tr>
-                                <th>Produto</th>
-                                <th class="text-end">Preço</th>
+                                <th class="py-3 ps-3">Produto</th>
+                                <th class="text-end py-3 pe-3">Preço</th>
                             </tr>
                         </thead>
                         <tbody id="lista-carrinho">
                             <tr id="carrinho-vazio">
                                 <td colspan="2" class="text-center text-muted py-5">
-                                    <i class="bi bi-cart-x display-4 d-block mb-3"></i>
-                                    Seu carrinho está vazio. Adicione produtos acima!
+                                    <i class="bi bi-cart-x display-1 opacity-25 d-block mb-3"></i>
+                                    <span class="fs-5">Seu carrinho está vazio no momento.</span>
                                 </td>
                             </tr>
                         </tbody>
                         <tfoot>
-                            <tr class="fs-5 fw-bold bg-light">
-                                <td>Total</td>
-                                <td class="text-end text-success" id="valor-total">R$ 0,00</td>
+                            <tr class="table-light">
+                                <td class="py-4 ps-3 fs-5 fw-bold text-dark">Total da Compra</td>
+                                <td class="py-4 pe-3 fs-4 fw-bold text-success text-end" id="valor-total">R$ 0,00</td>
                             </tr>
                         </tfoot>
                     </table>
                 </div>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3">
-                    <button class="btn btn-success btn-lg px-5">
-                        <i class="bi bi-check-lg"></i> Finalizar Compra
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                    <button class="btn btn-success btn-lg px-5 rounded-pill" onclick="finalizarCompra()">
+                        <i class="bi bi-check-lg me-2"></i> Finalizar Pedido
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-dark text-white text-center py-4 mt-5">
+    <footer class="bg-dark text-white text-center py-5 mt-5">
         <div class="container">
-            <p class="mb-0">&copy; 2026 TechTetive. Projeto acadêmico.</p>
+            <h5 class="fw-bold text-uppercase mb-3">TechTetive</h5>
+            <p class="text-white-50 mb-0">&copy; 2026 Todos os direitos reservados. Projeto acadêmico sem fins comerciais.</p>
         </div>
     </footer>
 
